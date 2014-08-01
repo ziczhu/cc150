@@ -11,14 +11,15 @@
 import sys
 
 
-def isUniqueChars(str):
-	str = str.replace(" ", "")
+def isUniqueChars(string):
 
-	if len(str) > 256:
+	string = string.replace(" ", "")
+
+	if len(string) > 256:
 		return False
 
 	char_set = [False] * 256
-	for char in str:
+	for char in string:
 		index = ord(char)
 		if index < 256:
 			if char_set[index]:
